@@ -1,5 +1,9 @@
+
 # Environments
 venv/
+venv311/
+venv312/
+.venv/
 __pycache__/
 *.pyc
 .env
@@ -17,3 +21,5 @@ data/vector_store/
 
 # Logs
 *.log
+
+data/chroma_db/

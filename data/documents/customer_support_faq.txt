@@ -1,0 +1,16 @@
+CUSTOMER SUPPORT FAQ
+
+Q: How do I track my order?
+A: You can track your order status using your order ID through the support chat or your account dashboard.
+
+Q: Can I cancel an order after placing it?
+A: Orders can be cancelled within 1 hour of placement if they have not yet shipped. Contact support immediately to request cancellation.
+
+Q: What payment methods are accepted?
+A: We accept credit/debit cards, UPI, and net banking.
+
+Q: How do I contact support?
+A: Support is available through chat, email, or by creating a support ticket describing your issue.
+
+Q: My order shows delivered but I did not receive it. What do I do?
+A: Please contact support within 48 hours so we can investigate with our courier partner.
