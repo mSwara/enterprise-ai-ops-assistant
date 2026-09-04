@@ -39,7 +39,12 @@ services:
       postgres:
         condition: service_healthy
     volumes:
-      - ./data:/app/data
+      # backend/app/rag/ingest.py computes its data paths via
+      # Path(__file__).resolve().parents[3], which resolves to /data
+      # (container root), not /app/data, given this image's directory
+      # layout (WORKDIR /app, code copied to /app/app/...). Mount here
+      # to match what the code actually looks for.
+      - ./data:/data
     restart: unless-stopped
 
   frontend:
