@@ -17,6 +17,10 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    # Auto-start this container whenever the EC2 instance reboots (e.g.
+    # after Stop/Start to save cost) or if it crashes. "unless-stopped"
+    # means it won't restart only if you deliberately `docker compose stop`.
+    restart: unless-stopped
 
   backend:
     build: ./backend
@@ -36,6 +40,7 @@ services:
         condition: service_healthy
     volumes:
       - ./data:/app/data
+    restart: unless-stopped
 
   frontend:
     build: ./frontend
@@ -45,6 +50,7 @@ services:
       - "8501:8501"
     depends_on:
       - backend
+    restart: unless-stopped
 
 volumes:
   pgdata:
